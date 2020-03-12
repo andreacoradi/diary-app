@@ -39,7 +39,7 @@ body {
 }
 
 
-#diary:first-line {
+#diary::first-line {
 	font-weight: bold;
 	width: 80%;
 	height: 40px;

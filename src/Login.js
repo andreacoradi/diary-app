@@ -86,6 +86,8 @@ class Login extends Component {
                     console.log(jwt)
                     localStorage.setItem('token', jwt)
                     this.setState({ logged: true })
+                } else {
+                    document.getElementById("error").innerText = "Username or password incorrect"
                 }
             });
     };
