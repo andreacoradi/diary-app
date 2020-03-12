@@ -133,3 +133,47 @@ body::-webkit-scrollbar {
 .navbar:hover .link-text {
 	display: block;
 }
+
+@media only screen and (max-width: 600px) {
+	#diary:first-line {
+		font-size: 30px;
+	}
+
+	#menu_btn {
+		width: 2rem;
+		margin-top: 0.5rem;
+	}
+
+	#logo_small {
+		width: 12rem;
+	}
+
+	#main {
+		margin-left: 2rem;
+	}
+	#diary {
+		height: 86vh;
+		font-size: 18px;
+	}
+	.navbar:hover .nav-link{
+		margin-top: 0;
+		width: 5rem;
+	}
+	.nav-link {
+		width: 2rem;
+		margin-left: 1rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	.link-text {
+		display: none;
+	}
+
+	.navbar {
+		width: 2rem;
+	}
+	.navbar:hover {
+		width: 9rem;
+		height: 100%;
+	}
+}

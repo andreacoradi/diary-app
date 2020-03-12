@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./Login.css";
 import logo from "./logo.svg"
-import register_btn from "./register_btn_light.svg"
+import register_btn from "./register_btn.svg"
 
 const AUTH_URL = "https://diary-api-deno.herokuapp.com/api/";
 // const AUTH_URL = "http://localhost:5000/api/";
