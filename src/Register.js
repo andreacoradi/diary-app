@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-//import "./App.css";
+import "./Login.css";
+import logo from "./logo.svg"
+import register_btn from "./register_btn_light.svg"
 
 const AUTH_URL = "https://jwt-auth-deno.herokuapp.com/";
 //const AUTH_URL = "https://tpijwt.andreacoradi.repl.co/";
@@ -64,36 +66,42 @@ class Register extends Component {
         }
         return (
             <div>
-                <h1>Diary App</h1>
-                <h2>Register</h2>
-                <p>Username</p>
-                <input
-                    type="text"
-                    required
-                    onChange={e => this.setState({ username: e.target.value })}
-                />
-                <p>Password</p>
-                <input
-                    type="password"
-                    required
-                    onChange={e => this.setState({ password: e.target.value })}
-                />
-                <p>Confirm password</p>
-                <input
-                    type="password"
-                    required
-                    onChange={e => this.setState({ password2: e.target.value })}
-                />
-                <br />
-                <p id="error" style={styles}></p>
-                <br />
-                <button onClick={this.signUp}>Sign up</button>
+                <img id="logo" src={logo} alt="" />
+                <p>
+
+                    <input
+                        id="input"
+                        placeholder="username"
+                        type="text"
+                        required
+                        onChange={e => this.setState({ username: e.target.value })}
+                    />
+                </p>
+                <p>
+
+                    <input
+                        id="input"
+                        placeholder="password"
+                        type="password"
+                        required
+                        onChange={e => this.setState({ password: e.target.value })}
+                    />
+                </p>
+                <p>
+
+                    <input
+                        id="input"
+                        placeholder="confirm password"
+                        type="password"
+                        required
+                        onChange={e => this.setState({ password2: e.target.value })}
+                    />
+                </p>
+                <p id="error"></p>
+                <img onClick={this.signUp} id="login_button" src={register_btn} alt="" />
             </div>
         );
     }
-}
-const styles = {
-    color: 'red',
 }
 
 export default Register;

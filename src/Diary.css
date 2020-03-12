@@ -1,5 +1,133 @@
-textarea {
+#diary {
+	margin-top: 20px;
 	height: 100%;
 	width: 80%;
 	resize: none;
+	font-size: 25px;
+	color: #94c7c1ff;
+	border: none;
+	max-height: 40rem;
+	font-family: serif;
+}
+
+body {
+	background-color: #94c7c1ff;
+	text-align: center;
+	font-family: serif;
+	font-weight: bolder;
+	color: white;
+}
+
+
+#menu_btn {
+	/* position: absolute;
+	left: 5px;
+	top: 7px;
+	bottom: 5px;*/
+	width: 50px;
+	margin-top: 2px;
+	margin-bottom: 6px;
+	margin-left: 2px;
+}
+
+#logo_small {
+	width: 30%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+#diary:first-line {
+	font-weight: bold;
+	width: 80%;
+	height: 40px;
+	font-size: 40px;
+	color: #e30613ff;
+}
+
+#diary:focus::placeholder {
+  color: transparent;
+}
+
+#diary:focus {
+	outline: #94c7c1ff;
+}
+
+/* #diary:focus:first-line {
+	color: transparent
+} */
+
+header {
+	width: 100%;
+	background: #94c7c1ff;
+}
+
+#main {
+	background-color: white;
+}
+
+.wrap {
+  width: 80%;
+  max-width: 24em;
+  margin: 0 auto;
+  padding: 0.25em 0.625em;
+}
+/*
+
+------------------------------
+
+*/
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+#main {
+	margin-left: 5rem;
+}
+
+.navbar {
+	width: 5rem;
+	height: 100%;
+	position: fixed;
+	background-color: #94c7c1ff;
+	transition: width 200ms ease;
+}
+
+.navbar-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	text-decoration: none;
+
+	min-width: 2rem;
+	margin: 0 1.5rem;
+}
+
+.link-text {
+	display: none;
+	text-decoration: none;
+	margin-top: 15px;
+}
+
+.navbar:hover {
+	width: 9rem;
+	height: 100%;
+}
+
+.navbar:hover #menu_btn{
+	display: none;
+}
+
+.navbar:hover .link-text {
+	display: block;
 }

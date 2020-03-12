@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 import "./Diary.css"
+//import "./Login.css"
+import logo from "./logo.svg"
+import menu_btn from "./menu_logo.svg"
+import page_icon from "./page_icon.svg"
+import { Redirect } from "react-router-dom";
 
 
 const API_URL = "http://localhost:5000/api/"
@@ -13,6 +18,7 @@ export default class Diary extends Component {
 	}
 
 	componentDidMount() {
+
 		const token = localStorage.getItem('token')
 		if (!token) {
 			console.log("Non ho il token :(")
@@ -32,6 +38,9 @@ export default class Diary extends Component {
 			})
 
 	}
+
+
+
 
 	getDate = () => {
 		const d = new Date()
@@ -65,8 +74,44 @@ export default class Diary extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Diary</h1>
-				<textarea name="diary" id="diary" rows="40" />
+				<nav className="navbar">
+					<img id="menu_btn" src={menu_btn} alt="" />
+					<ul className="navbar-nav">
+
+						{
+							this.state.pages.map(page => {
+								return (
+									<li class="nav-item">
+										<a class="link-text" href="#">{page.date}</a>
+										<img class="nav-link" src={page_icon} alt="" />
+									</li>
+								)
+							})
+						}
+
+
+						{/* <li class="nav-item">
+							<a class="link-text" href="#">23-03-2048</a>
+							<img class="nav-link" src={page_icon} alt="" />
+						</li>
+
+						<li class="nav-item">
+							<a class="link-text" href="#">44-12-1222</a>
+							<img class="nav-link" src={page_icon} alt="" />
+						</li> */}
+
+					</ul>
+				</nav>
+				<div id="main">
+					<header >
+
+						<img id="logo_small" src={logo} alt="" />
+					</header>
+					<textarea
+						spellCheck="false"
+						placeholder="INSERT TITLE"
+						name="diary" id="diary" rows="40" />
+				</div>
 			</div>
 		)
 	}

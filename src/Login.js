@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
+import "./Login.css"
+import logo from "./logo.svg"
+import login_icon from "./login_btn_light.svg"
 
 const AUTH_URL = "https://jwt-auth-deno.herokuapp.com/";
 
@@ -36,6 +39,7 @@ class Login extends Component {
         // console.log(token)
         const h = new Headers()
         h.append("x-access-token", token)
+        h.append("Access-Control-Allow-Origin", "*")
         fetch(AUTH_URL + API_URL, {
             headers: h
         })
@@ -54,6 +58,7 @@ class Login extends Component {
     signIn = () => {
         if (!this.state.username || !this.state.password) {
             console.log("Not Provided");
+            document.getElementById("error").innerText = "Provide username and password"
             return;
         }
         let API_URL = `users/${this.state.username}`
@@ -106,33 +111,32 @@ class Login extends Component {
         return (
 
             <div>
-                <h1>Diary App</h1>
-                <h2>Login</h2>
-                <p>Username</p>
-                <input
-                    value={username}
-                    type="text"
-                    required
-                    onChange={e => this.setState({ username: e.target.value })}
-                />
-                <p>Password</p>
-                <input
-                    value={password}
-                    type="password"
-                    required
-                    onChange={e => this.setState({ password: e.target.value })}
-                />
-                <br />
-                <p id="error" style={styles}></p>
-                <br />
-                <button onClick={this.signIn}>Sign in</button>
+                <img id="logo" src={logo} alt="" />
+                <p>
+                    <input id="input"
+                        placeholder="username"
+                        value={username}
+                        type="text"
+                        required
+                        onChange={e => this.setState({ username: e.target.value })}
+                    />
+                </p>
+                <p>
+                    <input id="input"
+                        placeholder="password"
+                        value={password}
+                        type="password"
+                        required
+                        onChange={e => this.setState({ password: e.target.value })}
+                    />
+                </p>
+                <p id="error"></p>
+                <img onClick={
+                    this.signIn} id="login_button" src={login_icon} alt="" />
                 <p>Not registered? <Link to="/register">Register</Link></p>
             </div>
         );
     }
-}
-const styles = {
-    color: 'red',
 }
 
 export default Login;
