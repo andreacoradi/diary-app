@@ -4,8 +4,7 @@ import "./Login.css";
 import logo from "./logo.svg"
 import register_btn from "./register_btn_light.svg"
 
-const AUTH_URL = "https://jwt-auth-deno.herokuapp.com/";
-//const AUTH_URL = "https://tpijwt.andreacoradi.repl.co/";
+const AUTH_URL = "https://diary-api-deno.herokuapp.com/api/";
 
 class Register extends Component {
     state = {
@@ -27,18 +26,20 @@ class Register extends Component {
             return;
         }
         console.log("Signing up")
-
-        let API_URL = "users"
-        fetch(AUTH_URL + API_URL, {
+        fetch(AUTH_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(this.state)
+            body: JSON.stringify({
+                username: this.state.username,
+                password: this.state.password
+            })
         })
             .then(r => {
                 if (r.ok) {
-                    console.log("TOP VEZ");
+                    console.log("Registrato!");
+                    localStorage.clear()
                     this.setState({ registered: true })
                 }
                 return r.json()
@@ -70,7 +71,7 @@ class Register extends Component {
                 <p>
 
                     <input
-                        id="input"
+                        className="input"
                         placeholder="username"
                         type="text"
                         required
@@ -80,7 +81,7 @@ class Register extends Component {
                 <p>
 
                     <input
-                        id="input"
+                        className="input"
                         placeholder="password"
                         type="password"
                         required
@@ -90,7 +91,7 @@ class Register extends Component {
                 <p>
 
                     <input
-                        id="input"
+                        className="input"
                         placeholder="confirm password"
                         type="password"
                         required

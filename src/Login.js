@@ -5,6 +5,7 @@ import logo from "./logo.svg"
 import login_icon from "./login_btn_light.svg"
 
 const AUTH_URL = "https://jwt-auth-deno.herokuapp.com/";
+// const AUTH_URL = "http://localhost:4000/";
 
 class Login extends Component {
     constructor(props) {
@@ -19,13 +20,16 @@ class Login extends Component {
             username: username,
             password: password,
             token: "",
-            logged: false
+            logged: false,
+            primaVolta: true
         };
     }
 
     componentDidMount = () => {
         if (this.props.location.state) {
             console.log(this.props.location.state)
+            document.getElementById("username").value = this.props.location.state.username
+            document.getElementById("password").value = this.props.location.state.password
         }
         const token = localStorage.getItem('token')
         if (!token) {
@@ -61,13 +65,14 @@ class Login extends Component {
             document.getElementById("error").innerText = "Provide username and password"
             return;
         }
+        console.log(JSON.stringify({ password: this.state.password }))
         let API_URL = `users/${this.state.username}`
         fetch(AUTH_URL + API_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(this.state)
+            body: JSON.stringify({ password: this.state.password })
         })
             .then(r => r.json())
             .then(b => {
@@ -80,7 +85,6 @@ class Login extends Component {
                     const jwt = b.jwt
                     this.setState({ token: b.jwt })
                     console.log(jwt)
-                    console.log(typeof (jwt))
                     localStorage.setItem('token', jwt)
                     this.setState({ logged: true })
                 }
@@ -100,12 +104,16 @@ class Login extends Component {
                 />
             )
         }
-        let username;
-        let password;
-        if (this.props.location.state) {
-            username = this.props.location.state.username
-            password = this.props.location.state.password
-        }
+        // let username;
+        // let password;
+        // if (this.state.primaVolta) {
+        //     if (this.props.location.state) {
+        //         username = this.props.location.state.username
+        //         password = this.props.location.state.password
+        //     }
+        //     this.setState({ primaVolta: false })
+        // }
+
 
 
         return (
@@ -113,18 +121,20 @@ class Login extends Component {
             <div>
                 <img id="logo" src={logo} alt="" />
                 <p>
-                    <input id="input"
+                    <input className="input"
+                        id="username"
                         placeholder="username"
-                        value={username}
+                        //value={username}
                         type="text"
                         required
                         onChange={e => this.setState({ username: e.target.value })}
                     />
                 </p>
                 <p>
-                    <input id="input"
+                    <input className="input"
+                        id="password"
                         placeholder="password"
-                        value={password}
+                        //value={password}
                         type="password"
                         required
                         onChange={e => this.setState({ password: e.target.value })}

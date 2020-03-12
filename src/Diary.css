@@ -1,14 +1,16 @@
 #diary {
 	margin-top: 20px;
-	height: 100%;
+
 	width: 80%;
 	resize: none;
 	font-size: 25px;
 	color: #94c7c1ff;
 	border: none;
-	max-height: 40rem;
+	height: 85vh;
 	font-family: serif;
 }
+
+
 
 body {
 	background-color: #94c7c1ff;
@@ -25,9 +27,9 @@ body {
 	top: 7px;
 	bottom: 5px;*/
 	width: 50px;
-	margin-top: 2px;
-	margin-bottom: 6px;
-	margin-left: 2px;
+	margin-top: 0.7rem;
+	margin-bottom: 0rem;
+	margin-left: 0rem;
 }
 
 #logo_small {
@@ -108,15 +110,15 @@ body::-webkit-scrollbar {
 	align-items: center;
 	height: 5rem;
 	text-decoration: none;
-
 	min-width: 2rem;
-	margin: 0 1.5rem;
+	margin: 0.3rem 1.5rem;
+	margin-top: 3rem;
 }
 
 .link-text {
 	display: none;
 	text-decoration: none;
-	margin-top: 15px;
+	/* margin-top: 15px; */
 }
 
 .navbar:hover {
