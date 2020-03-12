@@ -8,6 +8,8 @@ import page_icon from "./page_icon.svg"
 
 
 const API_URL = "https://diary-api-deno.herokuapp.com/api/"
+//const API_URL = "http://localhost:5000/api/";
+
 
 export default class Diary extends Component {
 
@@ -143,13 +145,12 @@ export default class Diary extends Component {
 		page.content = text
 
 		this.setState({ currentPage: page })
-		console.log(this.state.currentPage)
 		this.setCurrentPage()
 
 		this.setState({
 			timeout: setTimeout(() => {
 				this.save()
-			}, 5000)
+			}, 3000)
 		});
 
 	}

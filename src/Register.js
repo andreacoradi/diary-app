@@ -5,6 +5,7 @@ import logo from "./logo.svg"
 import register_btn from "./register_btn_light.svg"
 
 const AUTH_URL = "https://diary-api-deno.herokuapp.com/api/";
+// const AUTH_URL = "http://localhost:5000/api/";
 
 class Register extends Component {
     state = {

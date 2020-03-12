@@ -43,7 +43,6 @@ class Login extends Component {
         // console.log(token)
         const h = new Headers()
         h.append("x-access-token", token)
-        h.append("Access-Control-Allow-Origin", "*")
         fetch(AUTH_URL + API_URL, {
             headers: h
         })
@@ -104,16 +103,6 @@ class Login extends Component {
                 />
             )
         }
-        // let username;
-        // let password;
-        // if (this.state.primaVolta) {
-        //     if (this.props.location.state) {
-        //         username = this.props.location.state.username
-        //         password = this.props.location.state.password
-        //     }
-        //     this.setState({ primaVolta: false })
-        // }
-
 
 
         return (
