@@ -6,6 +6,7 @@ import logo from "./logo.svg"
 import menu_btn from "./menu_logo.svg"
 import page_icon from "./page_icon.svg"
 
+import { Link } from "react-router-dom"
 
 const API_URL = "https://diary-api-deno.herokuapp.com/api/"
 //const API_URL = "http://localhost:5000/api/";
@@ -182,8 +183,8 @@ export default class Diary extends Component {
 				</nav>
 				<div id="main">
 					<header >
+						<Link to="/"><img id="logo_small" src={logo} alt="" /></Link>
 
-						<img id="logo_small" src={logo} alt="" />
 					</header>
 					<textarea
 						onChange={e => this.funzioneBella(e)}
