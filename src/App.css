@@ -1,0 +1,38 @@
+.btn {
+	margin-top: 2rem;
+	width: 25rem;
+	height: 5rem;
+}
+
+#logout {
+	margin-top: 0;
+	width: 20rem;
+	height: 4rem;
+	margin-bottom: 1rem;
+}
+
+#logo {
+	margin-top: 3rem;
+	width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+	#logo {
+		width: 20rem;
+		margin-left: 0.3rem;
+	}
+
+	.btn {
+		width: 15rem;
+		height: 3rem;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	#logout {
+		margin-top: 0;
+		width: 10rem;
+		height: 2rem;
+		margin-bottom: 2rem;
+	}
+}

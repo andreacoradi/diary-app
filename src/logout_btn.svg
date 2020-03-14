@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Livello_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 527.2003 103.4"
+   xml:space="preserve"
+   sodipodi:docname="login_btn.svg"
+   width="527.20032"
+   height="103.4"
+   inkscape:version="1.0beta2 (unknown)"><metadata
+   id="metadata609"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs607" /><sodipodi:namedview
+   inkscape:snap-page="true"
+   inkscape:snap-bbox-midpoints="true"
+   inkscape:snap-bbox-edge-midpoints="true"
+   inkscape:snap-bbox="true"
+   inkscape:snap-object-midpoints="true"
+   inkscape:snap-to-guides="true"
+   inkscape:snap-grids="true"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   inkscape:document-rotation="0"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="995"
+   id="namedview605"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="1.2646927"
+   inkscape:cx="298.81704"
+   inkscape:cy="-52.422192"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Livello_1"
+   inkscape:pagecheckerboard="true" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:#94C7C1;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#E30613;}
+	.st3{opacity:0.19;}
+</style>
+
+
+<g
+   id="g14"
+   transform="translate(-696.4,-650.9)">
+	<path
+   class="st1"
+   d="M 1171.9,754.3 H 748.1 c -28.6,0 -51.7,-23.2 -51.7,-51.7 v 0 c 0,-28.6 23.2,-51.7 51.7,-51.7 h 423.8 c 28.6,0 51.7,23.2 51.7,51.7 v 0 c 0.1,28.6 -23.1,51.7 -51.7,51.7 z"
+   id="path12"
+   inkscape:connector-curvature="0" />
+</g>
+<g
+   id="g18"
+   transform="translate(-696.4,-650.9)">
+	<path
+   class="st0"
+   d="M 1168.6,745.5 H 751.4 c -23.1,0 -41.9,-18.8 -41.9,-41.9 0,-23.1 18.8,-41.9 41.9,-41.9 h 417.2 c 23.1,0 41.9,18.8 41.9,41.9 0,23.1 -18.8,41.9 -41.9,41.9 z M 751.4,667.8 c -19.8,0 -35.9,16.1 -35.9,35.9 0,19.8 16.1,35.9 35.9,35.9 h 417.2 c 19.8,0 35.9,-16.1 35.9,-35.9 0,-19.8 -16.1,-35.9 -35.9,-35.9 z"
+   id="path16"
+   inkscape:connector-curvature="0" />
+</g>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<text
+   id="text899"
+   y="69.172653"
+   x="150.72516"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:48px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#94c7c1;fill-opacity:1;stroke:none"
+   xml:space="preserve"><tspan
+     y="69.172653"
+     x="150.72516"
+     id="tspan897"
+     sodipodi:role="line">LOGOUT</tspan></text></svg>

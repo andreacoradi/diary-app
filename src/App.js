@@ -7,6 +7,12 @@ import {
 import Login from "./Login";
 import Register from "./Register";
 import Diary from "./Diary";
+import "./App.css"
+
+import Logo from "./logo.svg"
+import LoginBTN from "./login_btn.svg"
+import LogoutBTN from "./logout_btn.svg"
+import RegisterBTN from "./register_btn.svg"
 
 //import "./App.css";
 
@@ -17,20 +23,26 @@ export default function App() {
             <div>
 
                 <Route exact path="/">
-                    <h1>Home</h1>
-                    <ul>
-                        <li>
-                            <Link to="/login">Login</Link>
-                        </li>
-                        <li>
-                            <Link to="/login" onClick={e => {
-                                localStorage.clear()
-                            }}>Logout</Link>
-                        </li>
-                        <li>
-                            <Link to="/register">Register</Link>
-                        </li>
-                    </ul>
+                    <img id="logo" src={Logo} alt="" />
+
+                    <p>
+                        <Link to="/login"><img className="btn" src={LoginBTN} alt="" /></Link>
+                    </p>
+
+
+
+                    <p>
+                        <Link to="/login" onClick={e => {
+                            localStorage.clear()
+                        }}><img id="logout" className="btn" src={LogoutBTN} alt="" /></Link>
+                    </p>
+
+
+                    <p>
+                        <Link to="/register"><img className="btn" src={RegisterBTN} alt="" /></Link>
+                    </p>
+
+
                 </Route>
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
