@@ -75,9 +75,7 @@ class Login extends Component {
         })
             .then(r => r.json())
             .then(b => {
-                if (b.msg) {
-                    document.getElementById("error").innerText = b.msg
-                }
+
                 console.log(b.msg)
                 // console.log(b)
                 if (b.authenticated) {
@@ -88,6 +86,9 @@ class Login extends Component {
                     this.setState({ logged: true })
                 } else {
                     document.getElementById("error").innerText = "Username or password incorrect"
+                }
+                if (b.msg) {
+                    document.getElementById("error").innerText = b.msg
                 }
             });
     };

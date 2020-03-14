@@ -23,6 +23,11 @@ export default function App() {
                             <Link to="/login">Login</Link>
                         </li>
                         <li>
+                            <Link to="/login" onClick={e => {
+                                localStorage.clear()
+                            }}>Logout</Link>
+                        </li>
+                        <li>
                             <Link to="/register">Register</Link>
                         </li>
                     </ul>
