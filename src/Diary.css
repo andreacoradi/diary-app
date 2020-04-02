@@ -112,7 +112,7 @@ body::-webkit-scrollbar {
 	text-decoration: none;
 	min-width: 2rem;
 	margin: 0.3rem 1.5rem;
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 
 .link-text {
@@ -132,6 +132,11 @@ body::-webkit-scrollbar {
 
 .navbar:hover .link-text {
 	display: block;
+}
+
+.navbar:hover .nav-link {
+	margin-top: 0;
+	margin-bottom: 1.5rem;
 }
 
 @media only screen and (max-width: 600px) {
