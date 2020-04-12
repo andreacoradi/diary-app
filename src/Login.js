@@ -4,8 +4,7 @@ import "./Login.css"
 import logo from "./logo.svg"
 import login_icon from "./login_btn.svg"
 
-const AUTH_URL = "https://jwt-auth-deno.herokuapp.com/";
-// const AUTH_URL = "http://localhost:4000/";
+const AUTH_URL = "https://denoauth.tk/";
 
 class Login extends Component {
     constructor(props) {

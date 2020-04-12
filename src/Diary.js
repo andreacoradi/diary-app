@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 
 import "./Diary.css"
-//import "./Login.css"
 import logo from "./logo.svg"
 import menu_btn from "./menu_logo.svg"
 import page_icon from "./page_icon.svg"
 
 import { Link } from "react-router-dom"
 
-const API_URL = "https://diary-api-deno.herokuapp.com/api/"
-//const API_URL = "http://localhost:5000/api/";
+const API_URL = "https://diary-backend.tk/api/";
 
 
 export default class Diary extends Component {
@@ -130,7 +128,7 @@ export default class Diary extends Component {
 		this.setState({ currentPage: page })
 	}
 
-	funzioneBella = (evt) => {
+	autosave = (evt) => {
 		const text = evt.target.value
 		if (this.state.timeout) clearTimeout(this.state.timeout);
 
@@ -187,7 +185,7 @@ export default class Diary extends Component {
 
 					</header>
 					<textarea
-						onChange={e => this.funzioneBella(e)}
+						onChange={e => this.autosave(e)}
 
 						spellCheck="false"
 						placeholder="INSERT TITLE"
