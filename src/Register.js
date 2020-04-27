@@ -3,8 +3,7 @@ import { Redirect } from "react-router-dom";
 import "./Login.css";
 import logo from "./logo.svg"
 import register_btn from "./register_btn.svg"
-
-const AUTH_URL = "https://diary-backend.tk/api/";
+import { APP_URL } from "./APIEndpoints.js"
 
 class Register extends Component {
     state = {
@@ -26,7 +25,7 @@ class Register extends Component {
             return;
         }
         console.log("Signing up")
-        fetch(AUTH_URL, {
+        fetch(APP_URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

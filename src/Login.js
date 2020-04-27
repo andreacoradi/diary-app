@@ -3,8 +3,7 @@ import { Redirect, Link } from "react-router-dom";
 import "./Login.css"
 import logo from "./logo.svg"
 import login_icon from "./login_btn.svg"
-
-const AUTH_URL = "https://denoauth.tk/";
+import { AUTH_URL } from "./APIEndpoints.js"
 
 class Login extends Component {
     constructor(props) {
@@ -36,7 +35,7 @@ class Login extends Component {
             localStorage.clear();
             return
         }
-        console.log("Ho il token!", token)
+        console.log("Ho il token!")
         const API_URL = "auth"
         // console.log(JSON.stringify(token))
         // console.log(token)
@@ -74,13 +73,11 @@ class Login extends Component {
         })
             .then(r => r.json())
             .then(b => {
-
-                console.log(b.msg)
                 // console.log(b)
                 if (b.authenticated) {
                     const jwt = b.jwt
                     this.setState({ token: b.jwt })
-                    console.log(jwt)
+                    
                     localStorage.setItem('token', jwt)
                     this.setState({ logged: true })
                 } else {

@@ -7,7 +7,7 @@ import page_icon from "./page_icon.svg"
 
 import { Link } from "react-router-dom"
 
-const API_URL = "https://diary-backend.tk/api/";
+import { APP_URL } from "./APIEndpoints.js"
 
 
 export default class Diary extends Component {
@@ -26,9 +26,8 @@ export default class Diary extends Component {
 			return
 		}
 		console.log("Ho il token")
-		console.log(token)
 		console.log("Making request")
-		fetch(API_URL + "pages",
+		fetch(APP_URL + "pages",
 			{ headers: { "x-access-token": token } })
 			.then(r => r.json())
 			.then(b => {
@@ -36,7 +35,6 @@ export default class Diary extends Component {
 				this.setState({ username: b.username, pages: b.pages })
 				this.setPages()
 			})
-
 	}
 
 
@@ -97,7 +95,7 @@ export default class Diary extends Component {
 			pages: this.state.pages
 		}
 		console.log("BODY", body)
-		fetch(API_URL + "pages", {
+		fetch(APP_URL + "pages", {
 			method: "POST",
 			headers: {
 				"x-access-token": localStorage.getItem('token')
