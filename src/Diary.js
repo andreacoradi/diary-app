@@ -98,6 +98,7 @@ export default class Diary extends Component {
 		fetch(APP_URL + "pages", {
 			method: "POST",
 			headers: {
+				"content-type": "application/json",
 				"x-access-token": localStorage.getItem('token')
 			},
 			body: JSON.stringify(body)
